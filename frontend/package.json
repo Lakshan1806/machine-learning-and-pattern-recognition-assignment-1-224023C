@@ -1,0 +1,12 @@
+{
+  "private": true,
+  "name": "ensemble-learning-dashboard",
+  "version": "1.0.0",
+  "scripts": { "build": "vite build" },
+  "dependencies": { "react": "18.3.1", "react-dom": "18.3.1" },
+  "devDependencies": {
+    "@tailwindcss/vite": "4.1.18",
+    "tailwindcss": "4.1.18",
+    "vite": "6.3.5"
+  }
+}

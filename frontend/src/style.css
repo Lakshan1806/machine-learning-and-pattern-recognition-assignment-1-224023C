@@ -1,0 +1,33 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: Inter, system-ui, sans-serif;
+  --color-page: #f5f7f6;
+  --color-ink: #183630;
+  --color-brand: #125546;
+  --color-muted: #47665c;
+  --color-divider: #c9d6d1;
+  --spacing-gutter: clamp(16px, 4vw, 46px);
+}
+
+@layer base {
+  body { @apply bg-page font-sans leading-[1.55] text-ink; }
+  h2 { @apply mb-[.83em] text-2xl leading-tight font-bold; }
+  h3 { @apply my-[1em] text-[1.17rem] leading-tight font-bold; }
+  p { @apply my-4; }
+  a { @apply text-[#126954] underline; }
+  small, label { @apply block text-muted; }
+  small { @apply text-[.833em]; }
+  label, input { @apply max-w-full; }
+  button, select, .button-link { @apply rounded-[7px] border border-[#bacbc3] bg-white px-3.5 py-2 text-ink; }
+  button { @apply cursor-pointer; }
+  button[aria-pressed="true"] { @apply bg-brand text-white; }
+  input::file-selector-button { @apply mr-2 cursor-pointer rounded border border-divider bg-white px-2 py-1; }
+  table { @apply my-4.5 w-full border-collapse; }
+  th, td { @apply border-b border-[#dfebe4] p-2.5 text-left max-[550px]:p-[5px] max-[550px]:text-[.86rem]; }
+}
+
+@layer components {
+  .panel { @apply rounded-[14px] border border-[#d7e1db] bg-white p-[clamp(16px,3vw,30px)]; }
+  .history-card { @apply min-w-[140px] flex-1 rounded-lg bg-[#f1f5f3] p-3; }
+}
